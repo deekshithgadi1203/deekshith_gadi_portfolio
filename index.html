@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deekshith Gadi | Data Analyst Portfolio</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .grid-line {
+      stroke: rgba(255, 255, 255, 0.08);
+      stroke-width: 1;
+      stroke-dasharray: 200;
+      animation: draw-grid 6s linear infinite;
+    }
+
+    @keyframes draw-grid {
+      0% {
+        stroke-dashoffset: 200;
+      }
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    .cell-rect {
+      stroke: rgba(255, 255, 255, 0.1);
+      fill: none;
+      animation: cell-fade 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes cell-fade {
+      0% {
+        opacity: 0.1;
+      }
+      100% {
+        opacity: 0.3;
+      }
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+      <!-- SCROLL DATA WIDGET -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-center gap-1">
+    <svg id="data-circle" class="w-20 h-20" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="45" stroke="#e5e7eb" stroke-width="8" fill="none"/>
+      <circle id="data-ring" cx="50" cy="50" r="45" stroke="#14b8a6" stroke-width="8" fill="none"
+              stroke-dasharray="282.6" stroke-dashoffset="282.6" stroke-linecap="round"
+              transform="rotate(-90 50 50)" />
+    </svg>
+    <div class="text-center">
+      <span id="data-percent" class="font-bold text-teal-500">0</span><span class="text-gray-500">%</span>
+      <p class="text-xs text-gray-600">Data Explored</p>
+    </div>
+  </div>
+
+  <!-- HERO SECTION with Animated Excel Grid -->
+  <header class="relative bg-[#2d6a4f] text-white py-20 px-6 md:px-20 overflow-hidden min-h-[600px]">
+    <!-- Animated Grid SVG -->
+    <svg class="absolute inset-0 w-full h-full z-0" preserveAspectRatio="none">
+      <!-- Vertical Lines -->
+      <g class="grid-lines">
+        <line x1="10%" y1="0" x2="10%" y2="100%" class="grid-line"/>
+        <line x1="20%" y1="0" x2="20%" y2="100%" class="grid-line"/>
+        <line x1="30%" y1="0" x2="30%" y2="100%" class="grid-line"/>
+        <line x1="40%" y1="0" x2="40%" y2="100%" class="grid-line"/>
+        <line x1="50%" y1="0" x2="50%" y2="100%" class="grid-line"/>
+        <line x1="60%" y1="0" x2="60%" y2="100%" class="grid-line"/>
+        <line x1="70%" y1="0" x2="70%" y2="100%" class="grid-line"/>
+        <line x1="80%" y1="0" x2="80%" y2="100%" class="grid-line"/>
+        <line x1="90%" y1="0" x2="90%" y2="100%" class="grid-line"/>
+      </g>
+
+      <!-- Horizontal Lines -->
+      <g class="grid-lines">
+        <line x1="0" y1="10%" x2="100%" y2="10%" class="grid-line"/>
+        <line x1="0" y1="20%" x2="100%" y2="20%" class="grid-line"/>
+        <line x1="0" y1="30%" x2="100%" y2="30%" class="grid-line"/>
+        <line x1="0" y1="40%" x2="100%" y2="40%" class="grid-line"/>
+        <line x1="0" y1="50%" x2="100%" y2="50%" class="grid-line"/>
+        <line x1="0" y1="60%" x2="100%" y2="60%" class="grid-line"/>
+        <line x1="0" y1="70%" x2="100%" y2="70%" class="grid-line"/>
+        <line x1="0" y1="80%" x2="100%" y2="80%" class="grid-line"/>
+        <line x1="0" y1="90%" x2="100%" y2="90%" class="grid-line"/>
+      </g>
+
+      <!-- Optional: Highlight some cells -->
+      <rect x="20%" y="30%" width="10%" height="10%" class="cell-rect"/>
+      <rect x="60%" y="50%" width="15%" height="15%" class="cell-rect"/>
+    </svg>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+      <!-- Text -->
+      <div class="md:w-1/2 animate__animated animate__fadeInLeft">
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-4">
+          Hello, I'm <span class="text-teal-300">Deekshith Gadi</span><br>
+          A Data Analyst
+        </h1>
+        <p class="text-lg mb-6">I turn complex data into strategic dashboards and insights that fuel growth and smarter decisions.</p>
+        <a href="Deekshith_DataScience_Resume.pdf" download class="bg-teal-400 text-gray-900 font-bold px-6 py-3 rounded-full hover:bg-teal-300 transition">
+  Get My Resume
+</a>
+      </div>
+
+      <!-- Image -->
+      <div class="md:w-1/2 text-center animate__animated animate__fadeInRight">
+        <div class="relative w-full max-w-xs mx-auto rounded-full border-8 border-teal-400 shadow-xl overflow-hidden">
+          <img src="deekshith.png" alt="Deekshith Gadi" class="w-full rounded-full object-cover"/>
+        </div>
+      </div>
+    </div>
+
+    <!-- Smooth SVG Wave -->
+    <svg class="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 320">
+      <path fill="#f9fafb" fill-opacity="1"
+        d="M0,256L40,240C80,224,160,192,240,160C320,128,400,96,480,106.7C560,117,640,171,720,170.7C800,171,880,117,960,117.3C1040,117,1120,171,1200,165.3C1280,160,1360,96,1400,64L1440,32L1440,320L0,320Z">
+      </path>
+    </svg>
+  </header>
+  
+
+  
+
+  
+
+  <!-- IMPACT SECTION -->
+  <section id="impact" class="relative py-20 px-6 md:px-20 text-gray-800 bg-gray-50 overflow-hidden">
+    <div class="relative z-10 max-w-6xl mx-auto text-center animate__animated animate__fadeInUp">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-indigo-800">What I Bring to the Table</h2>
+      <div class="grid md:grid-cols-3 gap-8 text-left">
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+          <div class="text-teal-500 text-3xl mb-4"><i class="fas fa-lightbulb"></i></div>
+          <h3 class="text-xl font-semibold text-teal-600 mb-2">Insight-Driven Thinking</h3>
+          <p class="text-justify text-gray-700 leading-relaxed">I don’t just analyze data — I turn it into stories that guide strategy. Every dashboard is built for clarity, speed, and decision-making impact.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+          <div class="text-teal-500 text-3xl mb-4"><i class="fas fa-cogs"></i></div>
+          <h3 class="text-xl font-semibold text-teal-600 mb-2">Workflow Optimization</h3>
+          <p class="text-justify text-gray-700 leading-relaxed">I automate the manual. From Excel to Airflow pipelines, I engineer clean data flows that make analytics faster, smarter, and scalable.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+          <div class="text-teal-500 text-3xl mb-4"><i class="fas fa-chart-line"></i></div>
+          <h3 class="text-xl font-semibold text-teal-600 mb-2">Business-First Mindset</h3>
+          <p class="text-justify text-gray-700 leading-relaxed">I understand business goals. My data work supports real KPIs in finance, infrastructure, and tech with a sharp focus on ROI and usability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="relative bg-gray-100 py-28 px-6 md:px-20 text-center font-mono">
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-indigo-800 mb-6">
+      Clients I've Supported Through Infosys
+    </h2>
+    <p class="text-gray-600 max-w-2xl mx-auto mb-12 text-sm md:text-base">
+        As a Data Analyst at Infosys, I contributed insights and reporting for these global leaders.
+    </p>
+  
+    <!-- SQL Terminal Box -->
+    <div class="bg-gray-900 text-green-400 rounded-xl p-6 max-w-4xl mx-auto shadow-lg text-left text-sm sm:text-base overflow-x-auto">
+      <pre><code>
+  SELECT client_name, industry
+  FROM analytics_projects
+  WHERE executed_by = 'Infosys';
+  
+  Output:
+  +--------------------+---------------------+
+  | client_name        | industry            | 
+  +--------------------+---------------------+
+  | Bank of America    | Finance & Banking   | 
+  | Louis Vuitton      | Retail & Fashion    | 
+  | Barclays           | Investment Banking  |
+  +--------------------+---------------------+
+      </code></pre>
+    </div>
+  
+    <!-- SQL Icon Overlay (Optional) -->
+    <div class="absolute top-8 right-8 opacity-10">
+      <img src="https://img.icons8.com/ios-filled/100/ffffff/sql.png" class="w-20 h-20" alt="SQL Icon"/>
+    </div>
+  </section>
+  
+  <section class="bg-gray-50 relative py-24 px-6 md:px-20 overflow-hidden">
+    <!-- Background Rising Graph (SVG) -->
+    <svg class="absolute bottom-0 left-0 w-full h-64 opacity-10 z-0 pointer-events-none" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path fill="#6366F1" fill-opacity="0.2"
+        d="M0,320 L60,300 L120,280 L180,260 L240,240 L300,220 L360,200 L420,180 L480,160 L540,140 L600,120 L660,100 L720,80 L780,60 L840,40 L900,20 L960,10 L1020,20 L1080,30 L1140,40 L1200,60 L1260,80 L1320,100 L1380,120 L1440,140 V320 H0 Z">
+      </path>
+    </svg>
+  
+    <!-- Heading -->
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-indigo-800 text-center mb-16 relative z-10">
+      My Analytics Journey at Infosys
+    </h2>
+  
+    <!-- Card Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto relative z-10">
+  
+      <!-- Trainee Card -->
+      <div class="bg-white rounded-xl border border-teal-300 shadow-lg hover:shadow-2xl transition-all group">
+        <div class="h-2 bg-gradient-to-r from-teal-400 to-teal-500 rounded-t-xl"></div>
+        <div class="p-6 pt-8">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-teal-100 text-teal-600 flex items-center justify-center rounded-full">
+              <i class="fas fa-seedling"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-teal-600">Systems Engineer Trainee – Data Analyst Intern</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-4">
+            Started my data journey by supporting real-time business reporting and documentation across Oracle retail solutions
+          </p>
+          <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+            <li>🔗 Created SQL queries and Oracle reports to support decision-making in retail and hospitality industries.</li>
+            <li>📝 Drafted functional requirement documents to assist in solution design and implementation.</li>
+            <li>📈 Built Excel-based sales tracking reports that improved visibility into deal closures and client conversions.</li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Systems Engineer Card -->
+      <div class="bg-white rounded-xl border border-blue-300 shadow-lg hover:shadow-2xl transition-all group">
+        <div class="h-2 bg-gradient-to-r from-blue-400 to-blue-600 rounded-t-xl"></div>
+        <div class="p-6 pt-8">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-blue-100 text-blue-600 flex items-center justify-center rounded-full">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-blue-600">Systems Engineer – Data Analyst</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-4">
+            Played a key role in automating business insights and driving financial transparency for major clients like Bank of America and Barclays.
+          </p>
+          <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+            <li>💼 Built labor cost reports, billing summaries, and project trackers in Power BI, helping finance teams stay audit-ready.</li>
+            <li>🔍 Used predictive modeling to detect log anomalies, reducing client escalations by 25% through early issue alerts.</li>
+            <li>🧾 Automated report generation for project upgrades using structured templates, cutting documentation time significantly.</li>
+            <li>📉 Conducted root cause analysis of system issues and presented insights through interactive dashboards.</li>
+            <li>🐍 Streamlined QA processes by scripting data validations in SQL and Python, accelerating test cycles.</li>
+            <li>📎 Redesigned KPI dashboards for executives, improving clarity and usability across departments.</li>
+            <li>🛡 Ensured financial data compliance by collaborating closely with internal security and audit teams.</li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Senior Systems Engineer Card -->
+      <div class="bg-white rounded-xl border border-purple-300 shadow-lg hover:shadow-2xl transition-all group">
+        <div class="h-2 bg-gradient-to-r from-purple-400 to-purple-600 rounded-t-xl"></div>
+        <div class="p-6 pt-8">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-purple-100 text-purple-600 flex items-center justify-center rounded-full">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-purple-600">Senior Systems Engineer –   Data Analyst & Engineer</h3>
+          </div>
+          <p class="text-sm text-gray-700 mb-4">
+            Crafted impactful data engineering and analytics solutions that optimized IT infrastructure and enhanced performance visibility:
+          </p>
+          <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+            <li>🛠 Built ETL pipelines to analyze VM performance metrics, reducing downtime by 30% and enabling proactive resource planning.</li>
+            <li>📊 Developed Power BI dashboards and Excel visualizations to track infrastructure health and inform leadership decisions.</li>
+            <li>💾 Designed storage analytics models, improving disk utilization by 20% and contributing to cloud cost optimization.</li>
+            <li>🧩 Delivered internal training on performance dashboards, elevating team efficiency and data literacy.</li>
+            <li>📑 Managed documentation to ensure compliance and audit readiness across monitored environments.</li>
+            <li>🧬 Collaborated with DevOps teams and external vendors to ensure successful data integration across platforms.</li>
+            <li>🚀 Supported project tracking efforts, aligning data tasks with larger delivery milestones.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+  
+  
+  <section class="bg-white py-24 px-6 md:px-20" id="projects">
+
+    
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-indigo-800 text-center mb-16">
+    Personal Projects
+    </h2>
+  
+    <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+  
+
+
+              <!-- Project 3 -->
+      <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition">
+        <h3 class="text-xl font-bold text-indigo-700 mb-2">Job Market Analytics</h3>
+        <p class="text-gray-700 mb-3">Built a data pipeline that scrapes job listings and visualizes key hiring trends by role, location, and salary range.</p>
+        <img src="Job_Analytics.png" alt="Job Market Analysis" class="w-full h-50 object-cover rounded-lg mb-4">
+        <div class="flex flex-wrap gap-2 mb-4 text-sm">
+          <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full">Python</span>
+          <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full">Pandas</span>
+          <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full">Seaborn</span>
+          <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full">Web Scraping</span>
+        </div>
+        <div class="flex justify-end">
+          <a href="https://github.com/deekshithgadi1203/Job_Analytics_ETL_Pipeline.git" target="_blank" class="inline-flex items-center gap-2 bg-[#24292f] text-white px-4 py-2 rounded-lg text-sm hover:bg-[#1b1f23] transition">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="..."/>
+                <path d="M12 0C5.37 0 0 5.37 0 12a12 12 0 008.21 11.42c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.6-4.04-1.6a3.17 3.17 0 00-1.33-1.75c-1.09-.75.08-.73.08-.73a2.52 2.52 0 011.83 1.23 2.53 2.53 0 003.46.99c.05-.84.36-1.41.65-1.73-2.67-.3-5.47-1.34-5.47-5.96a4.66 4.66 0 011.24-3.23 4.32 4.32 0 01.12-3.19s1.01-.32 3.3 1.23a11.45 11.45 0 016 0c2.29-1.55 3.3-1.23 3.3-1.23a4.32 4.32 0 01.12 3.19 4.66 4.66 0 011.24 3.23c0 4.63-2.8 5.66-5.47 5.96.38.33.71.98.71 1.97v2.92c0 .32.22.7.83.58A12.01 12.01 0 0024 12c0-6.63-5.37-12-12-12z"/>
+
+            </svg>
+            
+            GitHub
+          </a>
+        </div>
+      </div>
+  
+      <!-- Project 4 -->
+      <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition">
+        <h3 class="text-xl font-bold text-pink-700 mb-2">Education Loan Tracker</h3>
+        <p class="text-gray-700 mb-3">Developed an Excel-based tracker that helps students monitor loan payments, visualize amortization, and forecast payback periods.</p>
+        <img src="Education_Tracker.png" alt="Loan Tracker" class="w-full h-50 object-cover rounded-lg mb-4">
+        <div class="flex flex-wrap gap-2 mb-4 text-sm">
+          <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full">Excel</span>
+          <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full">Dashboards</span>
+          <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full">Formulas</span>
+          <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full">Visualization</span>
+        </div>
+        <div class="flex justify-end">
+          <a href="https://github.com/deekshithgadi1203/Education_Loan_Dashboard.git" target="_blank" class="inline-flex items-center gap-2 bg-[#24292f] text-white px-4 py-2 rounded-lg text-sm hover:bg-[#1b1f23] transition">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="..."/>
+                <path d="M12 0C5.37 0 0 5.37 0 12a12 12 0 008.21 11.42c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.6-4.04-1.6a3.17 3.17 0 00-1.33-1.75c-1.09-.75.08-.73.08-.73a2.52 2.52 0 011.83 1.23 2.53 2.53 0 003.46.99c.05-.84.36-1.41.65-1.73-2.67-.3-5.47-1.34-5.47-5.96a4.66 4.66 0 011.24-3.23 4.32 4.32 0 01.12-3.19s1.01-.32 3.3 1.23a11.45 11.45 0 016 0c2.29-1.55 3.3-1.23 3.3-1.23a4.32 4.32 0 01.12 3.19 4.66 4.66 0 011.24 3.23c0 4.63-2.8 5.66-5.47 5.96.38.33.71.98.71 1.97v2.92c0 .32.22.7.83.58A12.01 12.01 0 0024 12c0-6.63-5.37-12-12-12z"/>
+
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+
+            <!-- Project 2 -->
+      <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition">
+        <h3 class="text-xl font-bold text-purple-700 mb-2">Face Recognition Clock-In/Out System</h3>
+        <p class="text-gray-700 mb-3">Created an AI-driven facial recognition system using OpenCV to automate attendance workflows.</p>
+        <img src="Face_Recognization.png" alt="Face Clock System" class="w-full h-50 object-cover rounded-lg mb-4">
+        <div class="flex flex-wrap gap-2 mb-4 text-sm">
+          <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full">Python</span>
+          <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full">OpenCV</span>
+          <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full">Face Detection</span>
+          <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full">Automation</span>
+        </div>
+        <div class="flex justify-end">
+          <a href="https://github.com/deekshithgadi1203/Face-Recognition-Clock-In-Out-System.git" target="_blank" class="inline-flex items-center gap-2 bg-[#24292f] text-white px-4 py-2 rounded-lg text-sm hover:bg-[#1b1f23] transition">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="..."/>
+                <path d="M12 0C5.37 0 0 5.37 0 12a12 12 0 008.21 11.42c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.6-4.04-1.6a3.17 3.17 0 00-1.33-1.75c-1.09-.75.08-.73.08-.73a2.52 2.52 0 011.83 1.23 2.53 2.53 0 003.46.99c.05-.84.36-1.41.65-1.73-2.67-.3-5.47-1.34-5.47-5.96a4.66 4.66 0 011.24-3.23 4.32 4.32 0 01.12-3.19s1.01-.32 3.3 1.23a11.45 11.45 0 016 0c2.29-1.55 3.3-1.23 3.3-1.23a4.32 4.32 0 01.12 3.19 4.66 4.66 0 011.24 3.23c0 4.63-2.8 5.66-5.47 5.96.38.33.71.98.71 1.97v2.92c0 .32.22.7.83.58A12.01 12.01 0 0024 12c0-6.63-5.37-12-12-12z"/>
+
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+
+      <!-- Project 1 -->
+      <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition">
+        <h3 class="text-xl font-bold text-teal-700 mb-2">Smart Street Lights Management</h3>
+        <p class="text-gray-700 mb-3">Designed an IoT dashboard to optimize smart lighting based on traffic and time, reducing energy consumption.</p>
+        <img src="Circuit_Diagram.png" alt="Smart Street Lights" class="w-full h-50 object-cover rounded-lg mb-4">
+  
+        <!-- Skills -->
+        <div class="flex flex-wrap gap-2 mb-4 text-sm">
+          <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full">Python</span>
+          <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full">IoT</span>
+          <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full">Dashboards</span>
+          <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full">Data Visualization</span>
+        </div>
+  
+        <!-- GitHub -->
+        <div class="flex justify-end">
+          <a href="https://github.com/deekshithgadi1203/Smart_Management_of_Lights.git" target="_blank" class="inline-flex items-center gap-2 bg-[#24292f] text-white px-4 py-2 rounded-lg text-sm hover:bg-[#1b1f23] transition">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M12 0C5.37 0 0 5.37 0 12a12 12 0 008.21 11.42c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.6-4.04-1.6a3.17 3.17 0 00-1.33-1.75c-1.09-.75.08-.73.08-.73a2.52 2.52 0 011.83 1.23 2.53 2.53 0 003.46.99c.05-.84.36-1.41.65-1.73-2.67-.3-5.47-1.34-5.47-5.96a4.66 4.66 0 011.24-3.23 4.32 4.32 0 01.12-3.19s1.01-.32 3.3 1.23a11.45 11.45 0 016 0c2.29-1.55 3.3-1.23 3.3-1.23a4.32 4.32 0 01.12 3.19 4.66 4.66 0 011.24 3.23c0 4.63-2.8 5.66-5.47 5.96.38.33.71.98.71 1.97v2.92c0 .32.22.7.83.58A12.01 12.01 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+  
+
+  
+
+  
+    </div>
+  </section>
+
+<!-- ACHIEVEMENTS SECTION -->
+<section id="achievements" class="bg-gray-50 py-24 px-6 md:px-20 text-gray-800">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-indigo-800 text-center mb-16">
+       Achievements
+    </h2>
+
+    <div class="space-y-10">
+      <!-- Publication -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition flex flex-col md:flex-row gap-6">
+        <div class="text-4xl text-indigo-600">
+          <i class="fas fa-book"></i>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-indigo-700 mb-1">
+            Experimental Analysis of Centrifugal Blower
+          </h3>
+          <p class="text-sm text-gray-500 mb-2">
+            Published in IJREAM – Volume 09, Issue 03, June 2023 • Journal: <a href="https://ijream.org/papers/IJREAMV09I0399114.pdf" target="_blank" class="text-teal-600 underline hover:text-teal-800">Read Paper</a>
+          </p>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Conducted an experimental performance evaluation of centrifugal blowers using backward, forward, and radial vane impellers. The findings offer engineering insights to boost airflow efficiency in industrial design.
+          </p>
+        </div>
+      </div>
+
+      <!-- Award -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition flex flex-col md:flex-row gap-6">
+        <div class="text-4xl text-yellow-500">
+          <i class="fas fa-award"></i>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-yellow-600 mb-1">
+            Insta Award – Certificate of Appreciation
+          </h3>
+          <p class="text-sm text-gray-500 mb-2">Presented by Infosys • February 2023</p>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Honored for analytical acumen and teamwork in enhancing ISVHub through precise bug validation and data diagnostics—contributing to Oracle EAS team’s operational reliability.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION SECTION - LOGO TIMELINE STYLE -->
+<section id="education" class="relative bg-gray-100 py-24 px-6 md:px-20 text-gray-800">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-indigo-800 text-center mb-20">My Academic Journey</h2>
+
+    <div class="relative border-l-4 border-teal-400 pl-14 space-y-14">
+
+      <!-- FAU -->
+      <div class="relative group">
+        <!-- Logo -->
+        <div class="absolute -left-[3.25rem] top-1 w-12 h-12 rounded-full overflow-hidden border-4 border-white shadow-md">
+          <img src="fau.png" alt="FAU Logo" class="w-full h-full object-contain bg-white"/>
+        </div>
+
+        <!-- Card -->
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all">
+          <h3 class="text-xl font-bold text-blue-700">Florida Atlantic University</h3>
+          <p class="text-sm text-gray-600 mb-1">Boca Raton, FL – <strong>Dec 2025 (Expected)</strong></p>
+          <p class="text-sm text-gray-800 mb-1">Master of Science in Data Science & Analytics</p>
+          <p class="text-sm text-gray-600 mb-1">GPA: <strong>3.95 / 4.0</strong></p>
+          <p class="text-sm text-gray-700">Courses: AI, Deep Learning, Data Mining, DBMS, Business Analytics, Big Data, Excel, Reinforcement Learning, Social Networks.</p>
+        </div>
+      </div>
+
+      <!-- VITS -->
+      <div class="relative group">
+        <!-- Logo -->
+        <div class="absolute -left-[3.25rem] top-1 w-12 h-12 rounded-full overflow-hidden border-4 border-white shadow-md">
+          <img src="vignan_logo.png" alt="VITS Logo" class="w-full h-full object-contain bg-white"/>
+        </div>
+
+        <!-- Card -->
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all">
+          <h3 class="text-xl font-bold text-green-700">Vignan Institute of Technology & Science</h3>
+          <p class="text-sm text-gray-600 mb-1">Telangana, India – <strong>July 2021</strong></p>
+          <p class="text-sm text-gray-800 mb-1">Bachelor of Technology in Mechanical Engineering</p>
+          <p class="text-sm text-gray-600">CGPA: <strong>7.12 / 10.0</strong></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  <!-- Scroll Percentage + Background Animation Scripts -->
+  <script>
+    const circle = document.getElementById("data-ring");
+    const percentText = document.getElementById("data-percent");
+    const radius = 45;
+    const circumference = 2 * Math.PI * radius;
+
+    window.addEventListener("scroll", () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const scrollPercent = Math.min((scrollTop / docHeight) * 100, 100);
+      const offset = circumference - (scrollPercent / 100) * circumference;
+
+      circle.style.strokeDashoffset = offset;
+      percentText.textContent = Math.round(scrollPercent);
+    });
+  </script>
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-gray-200 py-12 px-6 md:px-20">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+
+    <!-- About / Signature -->
+    <div>
+      <h4 class="text-lg font-bold text-white mb-2">Deekshith Gadi</h4>
+      <p class="text-gray-400">
+        Data Analyst blending code, creativity, and curiosity. Focused on actionable insights and scalable solutions.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+<div>
+  <h4 class="text-lg font-bold text-white mb-4">Connect</h4>
+  <div class="flex flex-col sm:flex-row sm:items-center sm:gap-6 space-y-4 sm:space-y-0">
+    
+    <!-- GitHub -->
+    <a href="https://github.com/deekshithgadi1203" target="_blank" class="flex items-center gap-2 hover:text-teal-400 transition">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub" class="w-6 h-6"/>
+      <span>GitHub</span>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/deekshith-gadi" target="_blank" class="flex items-center gap-2 hover:text-teal-400 transition">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn" class="w-6 h-6"/>
+      <span>LinkedIn</span>
+    </a>
+
+    <!-- Email -->
+    <a href="mailto:deekshithgadi1203@gmail.com" class="flex items-center gap-2 hover:text-teal-400 transition">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/new-post.png" alt="Email" class="w-6 h-6"/>
+      <span>Email</span>
+    </a>
+    
+  </div>
+</div>
+
+ 
+
+
+    <!-- Location + CTA -->
+    <div>
+      <h4 class="text-lg font-bold text-white mb-2">Based In</h4>
+      <p class="text-gray-400 mb-4">Boca Raton, FL • Open to Remote & Hybrid Roles / Relocation</p>
+    </div>
+  </div>
+
+  <div class="mt-12 text-center text-xs text-gray-500 border-t border-gray-700 pt-6">
+    © 2025 Deekshith Gadi. All rights reserved.
+  </div>
+</footer>
+
+
+</body>
+</html>
